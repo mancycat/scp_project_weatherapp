@@ -1,14 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <button class="b1">contact</button>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-take2</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4b5faf41c7.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+  <div class="container">
+    <div class="child">
+    <body>
+      <div class="card maincard">
+        <div class="card-body">
+          <br />
+          <br />
+           <form>
+            <div class="form-row">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control searchfield"
+                  id="search-city-field"
+                  placeholder="Enter a city..."
+                />
+              </div>
+              <div class="col">
+                <div
+                  class="btn-group buttonDegree"
+                  role="group"
+                  aria-label="Basic example"
+                >
+                  <button
+                    type="submit"
+                    class="btn btn-secondary"
+                    id="celsiusButton"
+                  >
+                    °C
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-secondary fahrenheitButton"
+                    id="fahrenheitButton"
+                  >
+                    °F
+                  </button>
+                </div>
+                <div>
+                    <button 
+                    type="submit" 
+                    class="btn btn-secondary currentButton" 
+                    id="currentButton" 
+                    aria-label="Third group">
+                    Current
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                  <img
+                    class="tempIconMain"
+                    src="visuals/sun.svg"
+                    alt="weather icon for Today"
+                    style="vertical-align:middle"
+                  />
+                </div>
+                <div class="col-4">
+                  <div class="todayCity" id="current-city">Sydney</div>
+                  <div class="todayDate todayContent" id="current-date">
+                    15/08/21
+                  </div>
+                  <div class="todayDay todayContent" id="current-day">
+                    Sunday
+                  </div>
+                  <div class="todayTime todayContent" id="current-time">
+                    5:35pm
+                  </div>
+                </div>
+                <div class="col-2 todayTemp" id="current-temp">
+                  24
+                </div>
+
+                <div class="col-3">
+                  <div class="todayContent2 todayDegree" id="current-metric">
+                    °C
+                  </div>
+                  <div class="todayContent2 precipation">Precipation: 0%</div>
+                  <div class="todayContent2 humidity">Humidity: 30%</div>
+                  <div class="todayContent2 wind">Wind: 4km/h</div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <div class="row forecast">
+              <div class="col-1"></div>
+              <div class="col-2 week">
+                Mon
+                <div class="date">16/08</div>
+                <img
+                  class="tempIcon"
+                  src="visuals/sun.svg"
+                  alt="weather icon for Monday"
+                />
+                <div class="highTemp futureTemp">
+                  24°C <span>/</span
+                  ><span class="lowTemp futureTemp"> 21°C</span>
+                </div>
+              </div>
+              <div class="col-2 week">
+                Tue
+                <div class="date">17/08</div>
+                <img
+                  class="tempIcon"
+                  src="visuals/sun.svg"
+                  alt="weather icon for Tuesday"
+                />
+                <div class="highTemp futureTemp">
+                  24°C <span>/</span>
+                  <span class="lowTemp futureTemp"> 21°C</span>
+                </div>
+              </div>
+
+              <div class="col-2 week">
+                Wed
+                <div class="date">18/08</div>
+                <img
+                  class="tempIcon"
+                  src="visuals/cloud-sun.svg"
+                  alt="weather icon for Wednesday"
+                />
+                <div class="highTemp futureTemp">
+                  24°C <span>/</span
+                  ><span class="lowTemp futureTemp"> 21°C</span>
+                </div>
+              </div>
+              <div class="col-2 week">
+                Thu
+                <div class="date">19/08</div>
+                <img
+                  class="tempIcon"
+                  src="visuals/cloud-sun-rain.svg"
+                  alt="weather icon for Thursday"
+                />
+                <div class="highTemp futureTemp">
+                  24°C <span>/</span
+                  ><span class="lowTemp futureTemp"> 21°C</span>
+                </div>
+              </div>
+              <div class="col-2 week">
+                Fri
+                <div class="date">20/08</div>
+                <img
+                  class="tempIcon"
+                  src="visuals/rain.svg"
+                  alt="weather icon for Friday"
+                />
+                <div class="highTemp futureTemp">
+                  24°C <span>/</span
+                  ><span class="lowTemp futureTemp"> 21°C</span>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <br />
+            <br />
+            <br />
+          </form>
+        </div>
+      </div>
+
+    </body>
+  </div>
+  </div>
+  <script src="src/script.js"></script>
 </html>
