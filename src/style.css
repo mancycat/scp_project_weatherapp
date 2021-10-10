@@ -103,9 +103,7 @@
 .futureTemp {
   margin-top: 30px;
 }
-.link {
-  position: relative;
-  left:300px;
+.gitHubLink {
   text-align: center;
-  color:#979ca0;
+  color: #5a6268;
 }
