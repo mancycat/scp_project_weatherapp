@@ -103,3 +103,9 @@
 .futureTemp {
   margin-top: 30px;
 }
+.link {
+  position: relative;
+  left:300px;
+  text-align: center;
+  color:#979ca0;
+}
